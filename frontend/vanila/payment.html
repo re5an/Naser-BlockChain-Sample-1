@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple login form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+
+    <script type="text/javascript" src="abi.js"></script>
+    <style>
+        html, body {
+            display: flex;
+            justify-content: center;
+            font-family: Roboto, Arial, sans-serif;
+            font-size: 15px;
+        }
+        form {
+            border: 5px solid #f1f1f1;
+        }
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 16px 8px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #8ebf42;
+            color: white;
+            padding: 14px 0;
+            margin: 10px 0;
+            border: none;
+            cursor: grabbing;
+            width: 100%;
+        }
+        h1 {
+            text-align:center;
+            fone-size:18;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .formcontainer {
+            text-align: left;
+            margin: 24px 50px 12px;
+        }
+        .container {
+            padding: 16px 0;
+            text-align:left;
+        }
+        span.psw {
+            float: right;
+            padding-top: 0;
+            padding-right: 15px;
+        }
+        /* Change styles for span on extra small screens */
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/action_page.php">
+        <h1>Make Payment Contract</h1>
+        <div class="formcontainer">
+            <hr/>
+            <button type="buttin" onClick="getBlockchain()">Login</button>
+            <div class="container">
+                <label for="uname"><strong>Receiver</strong></label>
+                <input type="text" placeholder="Enter Receiver Address" name="Receiver" required>
+                <label for="psw"><strong>Amount</strong></label>
+                <input type="text" placeholder="Enter Amount" name="Amount" required>
+                <label for="uname"><strong>Payer</strong></label>
+                <input type="text" placeholder="Enter Payer Address" name="Payer" required>
+                <label for="uname"><strong>id</strong></label>
+                <input type="text" placeholder="Enter Payment ID" name="id" required>
+            </div>
+            <button type="buttin" onClick="">Make</button>
+        </div>
+    <!--        <div class="container" style="background-color: #eee">-->
+    <!--            <label style="padding-left: 15px">-->
+    <!--                <input type="checkbox"  checked="checked" name="remember"> Remember me-->
+    <!--            </label>-->
+    <!--            <span class="psw"><a href="#"> Forgot password?</a></span>-->
+    <!--        </div>-->
+    </form>
+
+
+<!--    <div class="card">-->
+<!--        <h3>Our Newsletter</h3>-->
+<!--        <form onclick="return false;">-->
+<!--            <div class="inputbox"> <input type="text" name="name" class="form-control" required="required"> <span>Full Name</span> </div>-->
+<!--            <div class="inputbox"> <input type="text" name="name" class="form-control" required="required"> <span>Email</span> </div>-->
+<!--            <div class="inputbox"> <input type="text" name="name" class="form-control" required="required"> <span>Phone</span> </div> <button class="btn btn-danger btn-block">Send</button>-->
+<!--        </form>-->
+<!--    </div>-->
+
+
+</body>
+
+<script type="text/javascript" src="main.js"></script>
+<!--<style>-->
+<!--    body {-->
+<!--        height: 100vh;-->
+<!--        display: flex;-->
+<!--        justify-content: center;-->
+<!--        align-items: center;-->
+<!--        /*background: linear-gradient(45deg, #e43a15, #e65245)*/-->
+<!--    }-->
+
+<!--    .card {-->
+<!--        width: 400px;-->
+<!--        padding: 80px 50px;-->
+<!--        position: relative;-->
+<!--        border-radius: 20px;-->
+<!--        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2)-->
+<!--    }-->
+
+<!--    .card h3 {-->
+<!--        color: #111;-->
+<!--        margin-bottom: 50px;-->
+<!--        border-left: 5px solid red;-->
+<!--        padding-left: 10px;-->
+<!--        line-height: 1em-->
+<!--    }-->
+
+<!--    .inputbox {-->
+<!--        margin-bottom: 50px-->
+<!--    }-->
+
+<!--    .inputbox input {-->
+<!--        position: absolute;-->
+<!--        width: 300px;-->
+<!--        background: transparent-->
+<!--    }-->
+
+<!--    .inputbox input:focus {-->
+<!--        color: #495057;-->
+<!--        background-color: #fff;-->
+<!--        border-color: #e54b38;-->
+<!--        outline: 0;-->
+<!--        box-shadow: none-->
+<!--    }-->
+
+<!--    .inputbox span {-->
+<!--        position: relative;-->
+<!--        top: 7px;-->
+<!--        left: 1px;-->
+<!--        padding-left: 10px;-->
+<!--        display: inline-block;-->
+<!--        transition: 0.5s-->
+<!--    }-->
+
+<!--    .inputbox input:focus~span {-->
+<!--        transform: translateX(-10px) translateY(-32px);-->
+<!--        font-size: 12px-->
+<!--    }-->
+
+<!--    .inputbox input:valid~span {-->
+<!--        transform: translateX(-10px) translateY(-32px);-->
+<!--        font-size: 12px-->
+<!--    }-->
+<!--</style>-->
+
+</html>
